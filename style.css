@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer {
+    background: linear-gradient(to right, rgb(104, 227, 104), rgb(213, 21, 21));
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.krish{
+    background-image: url(./images/krrish.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px ;
+    height: 140px;
+    position: absolute;
+    bottom:0;
+    left:0;  
+}
+
+.obstacle{
+    background: url(./images/obstacle.png) no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.animateKrish{
+    animation: krish 0.8s linear ;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameOver{
+    position: relative;
+    font-size: 70px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#scoreCont{
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#start{
+    border-radius: 25px;
+    position: absolute;
+    left:50%;
+    top:70%;
+    transform: translate(-50%,-50%);
+    font-size: 70px;
+    text-align: center;
+    color: rgb(0, 4, 255);
+    border: 5px solid rgb(0, 4, 255);
+    width:250px;
+    height: 100px;
+    transition: width 0.2s, height 0.3s;
+}
+#start:hover{
+    width:270px;
+    height:105px;
+    padding-bottom: 0;
+    background:rgba(0, 4, 255, 0.301);
+    color:rgb(255, 255, 255); 
+    cursor:grab
+}
+
+.hidden{
+    visibility :hidden;
+}
+
+.hsContainer{
+    font-size: 40px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.986);
+}
+
+#Score{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.menu{
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius:15px;
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height:400px;
+}
+@keyframes krish{
+    0%{
+        bottom:0;
+    }
+    50%{
+        bottom: 200px;
+    }
+    100%{
+        bottom:0;
+    }
+}
+
+@keyframes obstacleAni {
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-5vw;
+    }
+}
